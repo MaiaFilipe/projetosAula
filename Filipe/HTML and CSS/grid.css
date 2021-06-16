@@ -1,0 +1,27 @@
+.container{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-gap: 10px;
+    justify-content: center;
+    padding-top: 20px;
+    height: 300px;
+}
+
+.item{
+    background-color: coral;
+    height: 40px;
+    padding-top: 25%;
+    text-align: center;
+    border-radius: 20px;
+    box-sizing:border-box;
+}
+
+.item10{
+    grid-column: 1 / span 3;
+    padding-top: 10%;
+}
+
+.item:active{
+    background-color: white;
+}

@@ -1,0 +1,24 @@
+body{
+    background-color: coral;
+    
+}
+
+table{
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+tr:nth-child(2n) {
+    background-color: black;
+    color: white;
+  }
+
+th, td {
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+}

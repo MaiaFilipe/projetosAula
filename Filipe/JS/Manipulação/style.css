@@ -1,0 +1,80 @@
+body{
+    background-color: aquamarine;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 10px;
+}
+
+.geralGrid{
+    display: grid;
+    grid-template-columns: 200px repeat(2, 40%);
+    gap: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    grid-template-areas: 
+        "labelNome inputNome busca"
+        "buttonBus inputBusca busca"
+        "buttonSub inputSub busca"
+        "buttonUpper . ."
+        "buttonTrim . ."
+        ;
+}
+
+#buttonBus, #buttonSub, #buttonUpper, #buttonTrim{
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 25px;
+    padding: 10px;
+    outline: none;
+    max-width: 250px;
+    border: 1px solid #CCC;
+}
+#buttonSub:hover{ background-color: #CCC; }
+#buttonBus:hover{ background-color: #CCC; }
+#buttonUpper:hover{ background-color: #CCC; }
+#buttonTrim:hover{ background-color: #CCC; }
+
+#labelNome, #labelBusca, #labelBus, #labelSub{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+input{
+    border: none;
+    width: 95%;
+    padding: 10px;
+    outline: none;
+    font-size: 20px;
+    border-radius: 0px;
+    transition: all .5s;
+    max-width: 490px;
+}
+input:focus{
+    border-radius: 5px;
+    background-color: #CCC;
+}
+
+#inputBusca{ grid-area: inputBusca; }
+#buttonBus{ grid-area: buttonBus; }
+#buttonSub{ grid-area: buttonSub; }
+#boxBusca{ grid-area: busca; }
+
+section{
+    padding: 10px;
+    border-radius: 5px;
+    max-width: inherit;
+    max-height: inherit;
+    font-size: 25px;
+    background-color: #EEE; 
+    text-align: center;
+    text-align: left;
+}
+
+#boxText{
+    margin: 0px;
+    height: 120px;
+    font-size: 20px;
+}

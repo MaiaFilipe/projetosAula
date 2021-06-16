@@ -1,0 +1,187 @@
+html{
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #9c9c9c;
+}
+
+body{
+    background-color: black;
+    margin: 0px 5% 0px 5%;
+    color: white;
+    height: 100%;
+} 
+
+main{
+    height: auto;
+    background-color: yellow;
+}
+
+header{
+    display: flex;
+    flex: row;
+    background-color: black;
+    text-align: center;
+}
+header div{
+    margin: 10px 10px 0px 10px;
+}
+
+#logoLeft, #logoRight{
+    flex: 1;
+}
+
+#logoLeft img{
+    width: 100px;
+    border-radius: 5px;
+}
+
+#logoLeft{
+    text-align: left;
+}
+
+#logoRight{
+    text-align: right;
+    vertical-align: center;
+}
+
+#logoRight img{
+    width: 60px;
+    border-radius: 5px;
+}
+
+main, footer {
+    border: 1px solid #9c9c9c;
+    border-radius: 5px;
+}
+
+main{
+    background-color: #5c5c5c;
+    width: auto;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+}
+
+#top{
+    text-align: center;
+}
+
+#topNome{
+    font-size: 60px;
+}
+
+h1{
+    margin: 0px;
+    padding-top: 10px;
+}
+
+hr{
+    margin: 0px 10px 0px 10px;
+    animation-duration: 1s;
+    animation-name: colors;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colors {
+    0% {
+        border-color: #5c5c5c;
+    }
+    50% {
+        border-color: #9c9c9c;
+    }
+    100% {
+        border-color: #5c5c5c;
+    }
+}
+
+#fotos img{
+    margin-top: 20px;
+    width: 50%;
+    border: 2px solid black; 
+    border-top-left-radius: 40px; 
+    border-top-right-radius: 40px;
+    text-align: center;
+}
+
+#conteudo{
+    text-align: center;
+}
+
+ul {
+    display: table;
+    margin: 0 auto;
+}
+
+@media (min-width: 760px){
+    main{
+        font-size: 20px;
+    }
+    #fotos img{
+        width: 30%;
+    }
+    #topNome{
+        font-size: 50px;
+    }
+    #logoRight img{
+        width: 80px;
+        border-radius: 5px;
+    }
+    #logoLeft img{
+        width: 100px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 760px){
+    main{
+        font-size: 20px;
+    }
+    #fotos img{
+        width: 50%;
+    }
+    #topNome{
+        font-size: 50px;
+    }
+    #logoRight img{
+        width: 60px;
+        border-radius: 5px;
+    }
+    #logoLeft img{
+        width: 80px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px){
+    main{
+        font-size: 15px;
+    }
+    #fotos img{
+        width: 50%;
+    }
+    #topNome{
+        font-size: 150%;
+    }
+    #logoRight img{
+        width: 30px;
+        border-radius: 5px;
+    }
+    #logoLeft img{
+        width: 50px;
+        border-radius: 5px;
+    }
+
+}
+
+
+footer{
+    background-color: #5c5c5c;
+    min-height: 80px;
+    padding: 10px;
+}

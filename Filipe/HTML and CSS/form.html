@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form>
+        <table id="formTran">
+            <div>
+            <tr>
+                <td>Nome completo: </td>
+                <td><input id="aqui" type="text" name="nome" placeholder=" Filipe Maia" autofocus required></td>
+            </tr>
+            
+            <tr>
+                <td>Email: </td>
+                <td><input type="email" name="email" placeholder=" example@gmail.com" required></td>
+            </tr>
+            <tr>
+                <td>Telefone: </td>
+                <td><input type="tel" name="telefone" placeholder=" 22 999999999" maxlength="11"></td>
+            </tr>
+            <tr>
+                <td>Senha: </td>
+                <td><input type="password" name="senha" placeholder=" ********" minlength="8" required></td>
+            </tr>
+            <tr>
+                <td>Sexo: </td>
+                <td>
+                    <div class="radio">
+                        <label style="font-size: 19px;"><input type="radio" name="sexo" style="transition: none; width: 20px;" checked>Masculino</label><br>
+                        <label style="font-size: 19px;"><input type="radio" name="sexo" style="transition: none; width: 20px;">Feminino</label><br>
+                        <label style="font-size: 19px;"><input type="radio" name="sexo" style="transition: none; width: 20px;">Prefiro não responder</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Bio: </td>
+                <td><textarea type="text" name="bio" placeholder=" Fale um pouco sobre você..." minlength="8" ></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" id="butEnv" alue="Envia aí!">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+#selo{
+    background-color: coral;
+    width: 300px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    margin-left: -80px;
+    margin-top: 40px;
+    transform: rotate(-45deg);
+}

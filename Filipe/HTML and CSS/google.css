@@ -1,0 +1,165 @@
+html{
+    height: auto;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-family: arial,sans-serif;
+}
+
+header{
+    background-color: white;
+    width: auto;
+    height: 60px;
+    color: #5c5c5c;
+    font-size: 12px;
+}
+
+header button{
+    font-size: 15px;
+    height: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #1a73e8;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+    margin-top: 13px;
+}
+
+header img{
+    width: 25px;
+    padding-top: 18px;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}
+
+header p{
+    margin: 0px; 
+    position: relative; 
+    float: right; 
+    margin-right: 20px;
+    margin-top: 25px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    background-color: black;
+}
+
+main{
+    padding: 10px 10px 0px 10x;
+    width: auto;
+    height: auto;
+    background-color: white;
+    text-align: center;
+}
+
+picture img{
+    padding-top: 12%;
+    padding-bottom: 20px;
+}
+
+#search{
+    height: 40px;
+    width: 40%;
+    border-radius: 40px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid #c4c4c4;
+    padding: 1px;
+}
+
+#searchIn{
+    width: auto;
+    padding-left: 20px;
+    border-radius: 40px;
+    background-color: white;
+}
+
+#searchIn textarea{
+    outline: 0;
+}
+
+#search #searchIn picture img{
+    width: 15px;
+    padding: 0px;
+    position: relative;
+    float: left;
+}
+
+#iconKey{
+    width: 25px;
+    position: relative;
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+#iconMic{
+    width: 30px;
+    position: relative;
+    float: right;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+#downSearch{
+    height: 318px; 
+    background-color: white;
+    padding-top: 20px;
+}
+
+#downSearch button{
+    font-size: 15px;
+    height: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f7f7f7;
+    border: none;
+    color: #5c5c5c;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 13px;
+}
+
+footer div{
+    height: 17px; 
+    color: #5c5c5c;
+    padding: 15px 30px 15px 30px;
+}
+
+footer div p{
+    font-size: 15px;
+    margin: 0px; 
+    position: relative; 
+    float: left;
+    margin-right: 30px;
+}
+
+#footerRight{
+    position: relative; 
+    float: right;
+}
+
+footer hr{
+    height:1px; 
+    border-width:0; 
+    color:#cecece;
+    background-color: #cecece;
+    margin: 0px;
+}
+
+footer{
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.959);
+}

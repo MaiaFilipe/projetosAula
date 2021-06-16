@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hora</title>
+</head>
+<body>
+    <h1 id="horaNow"></h1>
+
+    <h1 id="horaAqui"></h1>
+
+    <h1>Somar horas!</h1>
+    <div class="main">
+
+        <div class="enter">
+            <!--
+                <label id="horaUser">
+                <h1>Hora:</h1>
+                <input type="date">
+            </label>
+            -->
+            
+            <br>
+            <div class="labels">
+
+                <label id="labelAno">
+                    <input type="number" id="ano" value="0" >
+                    Anos
+                </label>
+
+                <label id="labelMes">
+                    <input type="number" id="mes" value="0">
+                    Meses
+                </label>
+                <label id="labelDia">
+                    <input type="number" id="dia" value="0">
+                    Dias
+                </label>
+                <label id="labelHora">
+                    <input type="number" id="hora" value="0">
+                    Horas
+                </label>
+                <label id="labelMinuto">
+                    <input type="number" id="minuto" value="0">
+                    Minutos
+                </label>
+                <label id="labelSegundo">
+                    <input type="number" id="segundo" value="0" >
+                    Segundos
+                </label>
+            </div>
+            <br>
+            <button id="somar" onclick="somar()" >Somar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
