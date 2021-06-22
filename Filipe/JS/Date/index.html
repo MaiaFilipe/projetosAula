@@ -15,45 +15,73 @@
     <h1>Somar horas!</h1>
     <div class="main">
 
-        <div class="enter">
-            <!--
-                <label id="horaUser">
-                <h1>Hora:</h1>
-                <input type="date">
-            </label>
-            -->
-            
-            <br>
-            <div class="labels">
+        <div class="label">
+            <div class="label1">
+                <h1 id="title-label1">Gerar data</h1>
+                <h1 id="horaGerada"></h1>
+                <label id="label1Ano">
+                    <input type="number" onchange="gerar()" id="gerarAno" value="1" autofocus>
+                    Ano
+                </label>
 
-                <label id="labelAno">
+                <label id="label1Mes">
+                    <input type="number" onchange="gerar()" id="gerarMes" value="1">
+                    Mês
+                </label>
+                <label id="label1Dia">
+                    <input type="number" onchange="gerar()" id="gerarDia" value="1">
+                    Dia
+                </label>
+                <label id="label1Hora">
+                    <input type="number" onchange="gerar()" id="gerarHora" value="1">
+                    Hora
+                </label>
+                <label id="label1Minuto">
+                    <input type="number" onchange="gerar()" id="gerarMinuto" value="1">
+                    Minuto
+                </label>
+                <label id="label1Segundo">
+                    <input type="number" onchange="gerar()" id="gerarSegundo" value="1" >
+                    Segundo
+                </label>
+                <button id="hora" onclick="hora('agora')" >Agora</button>
+                <button id="zerar" onclick="zerar()" >Zerar</button>
+            </div>
+        </div>
+            
+        <div class="label">
+            <div class="label2">
+                <h1 id="title-label2">Fazer operações</h1>
+                <h3 id="sub-title2">Adição e subtração</h3>
+                <label id="label2Ano">
                     <input type="number" id="ano" value="0" >
                     Anos
                 </label>
 
-                <label id="labelMes">
+                <label id="label2Mes">
                     <input type="number" id="mes" value="0">
                     Meses
                 </label>
-                <label id="labelDia">
+                <label id="label2Dia">
                     <input type="number" id="dia" value="0">
                     Dias
                 </label>
-                <label id="labelHora">
+                <label id="label2Hora">
                     <input type="number" id="hora" value="0">
                     Horas
                 </label>
-                <label id="labelMinuto">
+                <label id="label2Minuto">
                     <input type="number" id="minuto" value="0">
                     Minutos
                 </label>
-                <label id="labelSegundo">
+                <label id="label2Segundo">
                     <input type="number" id="segundo" value="0" >
                     Segundos
                 </label>
+                <button id="somar" onclick="somar('+')" >Somar</button>
+                <button id="subtrair" onclick="somar('-')" >Subtrair</button>
             </div>
             <br>
-            <button id="somar" onclick="somar()" >Somar</button>
         </div>
     </div>
 

@@ -1,36 +1,93 @@
 var data = new Date();
 document.querySelector('#horaAqui').innerHTML = data;
+document.querySelector("#horaGerada").innerHTML = "01:01:01 01/01/01";
 
-function hora(){
+function hora(hash){
+    console.log("Atualizando a hora!");
+    
     let date = new Date();
     document.querySelector('#horaNow').innerHTML = 
-    date.getHours()
+    (date.getHours() < 10 ? '0' : '') + date.getHours()
     + (date.getMinutes() < 10 ? ':0' : ':') + date.getMinutes()
     + (date.getSeconds() < 10 ? ':0' : ':') + date.getSeconds()
-    + ' ' + (date.getMonth() < 10 ? '0' : ':') +date.getMonth() 
+    + ' ' 
+    + (date.getDate() < 10 ? '0' : '') + date.getDate()
+    + (date.getMonth() < 10 ? '/0' : '/') + (date.getMonth()) 
     + '/'
-    + date.getFullYear();
+    + (date.getFullYear() < 10 ? '0' : '') + (date.getFullYear()) ;
+    console.log(hash);
 }
 
 function validar(x, y){
-    if(x == "" || x == 0 || x == " "){
+    if(x == "" || x == " "){
+        console.log(y+" deu ruim");
         return 0;
-        console.log(y);
     } else {
-        console.log(y);
-        console.log(typeof(y))
-        return parseInt(document.querySelector(y).value);
+        /*
+        console.log("Valor de "+y+" é: "+(document.querySelector(y).value));
+        console.log("O type de "+y+" é: "+typeof(document.querySelector(y).value));
+        */
+
+        let h = parseInt(document.querySelector(y).value);
+        /*
+        console.log("Valor de "+y+" é: "+(h));
+        console.log("O type de "+y+" é: "+typeof(h));
+        console.log("");
+        */
+        return h;
     }
 }
 
-function somar(){
-    let date = data;
-    let ano = document.querySelector('#ano').value;
-    let mes = document.querySelector('#mes').value;
-    let dia = document.querySelector('#dia').value;
-    let hora = document.querySelector('#hora').value;
-    let minuto = document.querySelector('#minuto').value;
-    let segundo = document.querySelector('#segundo').value;
+function gerar(){
+    var date = data;
+    console.log("gerando");
+    console.log(date);
+
+    let ano =  data.setFullYear(document.querySelector('#gerarAno').value);
+    let mes = data.setMonth(document.querySelector('#gerarMes').value);
+    let dia = data.setDate(document.querySelector('#gerarDia').value);
+    let hora = data.setHours(document.querySelector('#gerarHora').value);
+    let minuto = data.setMinutes(document.querySelector('#gerarMinuto').value);
+    let segundo = data.setSeconds(document.querySelector('#gerarSegundo').value);
+
+    ano = validar(ano, '#gerarAno');
+    mes = validar(mes, '#gerarMes');
+    dia = validar(dia, '#gerarDia');
+    hora = validar(hora, '#gerarHora');
+    minuto = validar(minuto, '#gerarMinuto');
+    segundo = validar(segundo, '#gerarSegundo');
+
+    date.setFullYear(ano);
+    date.setMonth(mes);
+    date.setDate(dia);
+    date.setHours(hora);
+    date.setMinutes(minuto);
+    date.setSeconds(segundo);
+
+    document.querySelector('#horaGerada').innerHTML = 
+    (date.getHours() < 10 ? '0' : '') + date.getHours()
+    + (date.getMinutes() < 10 ? ':0' : ':') + date.getMinutes()
+    + (date.getSeconds() < 10 ? ':0' : ':') + date.getSeconds()
+    + ' ' 
+    + (date.getDate() < 10 ? '0' : '') + date.getDate()
+    + (date.getMonth() < 10 ? '/0' : '/') + (date.getMonth()) 
+    + '/'
+    + (date.getFullYear() < 10 ? '0' : '') + (date.getFullYear()) ;
+
+    console.log(date)
+    return date;
+}
+
+function somar(op){
+    let date = gerar();
+    console.log("somando");
+    console.log(date);
+    let ano = date.getFullYear();
+    let mes = date.getMonth();
+    let dia = date.getDate();
+    let hora = date.getHours();
+    let minuto = date.getMinutes();
+    let segundo = date.getSeconds();
     
     console.log("Ano: "+ano);
     console.log("Mês: "+mes);
@@ -46,22 +103,49 @@ function somar(){
     minuto = validar(minuto, '#minuto');
     segundo = validar(segundo, '#segundo');
 
-    console.log(typeof(ano));
-    console.log(typeof(mes));
-    console.log(typeof(dia));
-    console.log(typeof(hora));
-    console.log(typeof(minuto));
-    console.log(typeof(segundo));
+    if(op == "+"){
+        date.setFullYear(date.getFullYear()+ano);
+        date.setMonth(date.getMonth()+mes);
+        date.setDate(date.getDate()+dia);
+        date.setHours(date.getHours()+hora);
+        date.setMinutes(date.getMinutes()+minuto);
+        date.setSeconds(date.getSeconds()+segundo);
 
-    date.setFullYear(date.getFullYear()+ano);
-    date.setMonth(date.getMonth()+mes);
-    date.setDate(date.getDate()+dia);
-    date.setHours(date.getHours()+hora);
-    date.setMinutes(date.getMinutes()+minuto);
-    date.setSeconds(date.getSeconds()+segundo);
+        document.querySelector('#gerarAno').value = data.getFullYear();
+        document.querySelector('#gerarMes').value = data.getMonth();
+        document.querySelector('#gerarDia').value = data.getDate();
+        document.querySelector('#gerarHora').value = data.getHours();
+        document.querySelector('#gerarMinuto').value = data.getMinutes();
+        document.querySelector('#gerarSegundo').value = data.getSeconds();
+    } else {
+        date.setFullYear(date.getFullYear()-ano);
+        date.setMonth(date.getMonth()-mes);
+        date.setDate(date.getDate()-dia);
+        date.setHours(date.getHours()-hora);
+        date.setMinutes(date.getMinutes()-minuto);
+        date.setSeconds(date.getSeconds()-segundo);
 
-    document.querySelector('#horaAqui').innerHTML = data;
+        document.querySelector('#gerarAno').value = data.getFullYear();
+        document.querySelector('#gerarMes').value = data.getMonth();
+        document.querySelector('#gerarDia').value = data.getDate();
+        document.querySelector('#gerarHora').value = data.getHours();
+        document.querySelector('#gerarMinuto').value = data.getMinutes();
+        document.querySelector('#gerarSegundo').value = data.getSeconds();
+    }
+
+    document.querySelector('#horaGerada').innerHTML = data;
 }
+
+function zerar(){
+    document.querySelector('#gerarAno').value = 1;
+    document.querySelector('#gerarMes').value = 1;
+    document.querySelector('#gerarDia').value = 1;
+    document.querySelector('#gerarHora').value = 1;
+    document.querySelector('#gerarMinuto').value = 1;
+    document.querySelector('#gerarSegundo').value = 1;
+    document.querySelector("#horaGerada").innerHTML = "01:01:01 01/01/01";
+}
+
 
 hora();
 setInterval(hora, 1000);

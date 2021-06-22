@@ -13,6 +13,9 @@ body{
 .main{
     margin-left: 50px;
     margin-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "label1 label2";
 }
 
 
@@ -30,58 +33,123 @@ body{
     border: 4px solid white;
     text-align: center;
 }
-#horaUser input{
-    height: 25px;
-    outline: none;
-}
 
 .enter{
-    max-width: 100%;
+    width: 400px;
     height: auto;
     background-color: #999;
     border-radius: 5px;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-    "ano mes"
-    "dia hora"
-    "minuto segundo"
-    ;
-}
-.enter label{
-    font-size: 20px;
 }
 
-.enter button{
+button{
     border-radius: 5px;
     text-decoration: none;
     border-color: #999;
     height: 40px;
-    width: 100px;
     margin-top: 15px;
     font-size: 20px;
-    position: relative;
-    margin-left: 50%;
 }
-.enter label input{
+.label2 button{
+    max-width: 150px;
+}
+input{
     height: 25px;
     width: 50px;
     outline: none;
     margin-right: 5px;
 }
 
+.label{
+    width: 500px;
+    padding: 20px;
+    background-color: #999;
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 
-#labelAno{
-    width: auto; 
+.label1{
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-areas:
+        "title title" 
+        "horaGerada horaGerada"
+        "ano mes"
+        "dia hora"
+        "min seg"
+        "zerar zerar"
+    ;
+}/* label2 */
+#label1Ano{ grid-area: ano; }
+#label1Mes{ grid-area: mes; }
+#label1Dia{ grid-area: dia; }
+#label1Hora{ grid-area: hora; }
+#label1Minuto{ grid-area: min; }
+#label1Segundo{ grid-area: seg; }
+#gerar{ grid-area: gerar; }
+#zerar{ grid-area: zerar; }
+#title-label1{ 
+    grid-area: title; 
+    text-transform: uppercase; 
+    margin: 0px; 
+    padding: 0px;
+}
+#horaGerada{ 
+    grid-area: horaGerada;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+#label1Ano, #label1Mes, #label1Dia, #label1Hora, #label1Minuto, #label1Segundo{
+    width: 200px; 
     text-align: left; 
     font-size: var(--fontLabel);
     text-transform: uppercase;
 }
 
-#labelAno{ grid-area: ano; }
-#labelMes{ grid-area: mes; }
-#labelDia{ grid-area: dia; }
-#labelHora{ grid-area: hora; }
-#labelMinuto{ grid-area: minuto; }
-#labelSegundo{ grid-area: seg; }
+
+
+
+.label2{
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-areas:
+        "title2 title2" 
+        "sub sub"
+        "ano mes"
+        "dia hora"
+        "min seg"
+        "botaoSom botaoSub"
+    ;
+}/* label2 */
+#label2Ano{ grid-area: ano; }
+#label2Mes{ grid-area: mes; }
+#label2Dia{ grid-area: dia; }
+#label2Hora{ grid-area: hora; }
+#label2Minuto{ grid-area: min; }
+#label2Segundo{ grid-area: seg; }
+#somar{ grid-area: botaoSom; }
+#subtrair{ grid-area: botaoSub; }
+#sub-title2{ 
+    grid-area: sub;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+#title-label2{ 
+    grid-area: title2; 
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#label2Ano, #label2Mes, #label2Dia, #label2Hora, #label2Minuto, #label2Segundo{
+    width: 200px; 
+    text-align: left; 
+    font-size: var(--fontLabel);
+    text-transform: uppercase;
+}
